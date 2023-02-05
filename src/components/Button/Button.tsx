@@ -1,18 +1,25 @@
-import { FC, ReactNode } from "react";
 import styles from "./Button.module.scss";
 
 interface Props<T> {
   children: T;
   onClick: (value: T) => void;
+  variant?: "regular" | "dark" | "orange";
 }
 
-const Button = <T extends string>({ children, onClick }: Props<T>) => {
+const Button = <T extends string>({
+  children,
+  onClick,
+  variant = "regular",
+}: Props<T>) => {
   const handleClick = () => {
     onClick(children);
   };
 
   return (
-    <button className={styles.button} onClick={handleClick}>
+    <button
+      className={`${styles.button} ${styles[variant]}`}
+      onClick={handleClick}
+    >
       {children}
     </button>
   );

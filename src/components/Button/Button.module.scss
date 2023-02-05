@@ -1,11 +1,13 @@
 .button {
-  background: #ccc;
   border: 0;
   font-size: 25px;
   padding: 10px;
   color: #000;
-  width: 25%;
   cursor: pointer;
+}
+
+.regular {
+  background: #ccc;
 
   &:hover {
     background: darken(#ccc, 5%);
@@ -13,5 +15,29 @@
 
   &:active {
     background: darken(#ccc, 10%);
+  }
+}
+
+.orange {
+  background: orange;
+
+  &:hover {
+    background: darken(orange, 5%);
+  }
+
+  &:active {
+    background: darken(orange, 10%);
+  }
+}
+
+.dark {
+  background: #aaa;
+
+  &:hover {
+    background: darken(#aaa, 5%);
+  }
+
+  &:active {
+    background: darken(#aaa, 10%);
   }
 }
