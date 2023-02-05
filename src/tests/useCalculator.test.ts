@@ -34,6 +34,30 @@ describe("useCalendar hook", () => {
     expect(result.current.display).toBe("2");
   });
 
+  it("should allow doing math with current input with = sign", () => {
+    const { result } = renderHook(() => useCalculator());
+
+    act(() => {
+      const commands = ["2", "+", "=", "="] as const;
+
+      commands.forEach((command) => result.current.action(command));
+    });
+
+    expect(result.current.display).toBe("6");
+  });
+
+  it("should allow doing math with current input with = sign", () => {
+    const { result } = renderHook(() => useCalculator());
+
+    act(() => {
+      const commands = ["9", "8", "+", "2", "/", "="] as const;
+
+      commands.forEach((command) => result.current.action(command));
+    });
+
+    expect(result.current.display).toBe("1");
+  });
+
   it("when divided by 0 should return infinity", () => {
     const { result } = renderHook(() => useCalculator());
 

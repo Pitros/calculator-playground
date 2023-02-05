@@ -1,19 +1,19 @@
 .body {
   width: 500px;
   font-size: 25px;
-  border: 2px solid #000;
+  border: 2px solid $black;
 }
 
 .display {
   text-align: right;
-  background: #333;
-  color: #fff;
+  background: $mineShaft;
+  color: $white;
   padding: 25px;
 }
 
 .buttons {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  background: #000;
+  background: $black;
   gap: 1px;
 }

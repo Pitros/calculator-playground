@@ -2,42 +2,42 @@
   border: 0;
   font-size: 25px;
   padding: 10px;
-  color: #000;
+  color: $black;
   cursor: pointer;
 }
 
 .regular {
-  background: #ccc;
+  background: $silver;
 
   &:hover {
-    background: darken(#ccc, 5%);
+    background: darken($silver, 5%);
   }
 
   &:active {
-    background: darken(#ccc, 10%);
+    background: darken($silver, 10%);
   }
 }
 
 .orange {
-  background: orange;
+  background: $orange;
 
   &:hover {
-    background: darken(orange, 5%);
+    background: darken($orange, 5%);
   }
 
   &:active {
-    background: darken(orange, 10%);
+    background: darken($orange, 10%);
   }
 }
 
 .dark {
-  background: #aaa;
+  background: $sliverChalice;
 
   &:hover {
-    background: darken(#aaa, 5%);
+    background: darken($sliverChalice, 5%);
   }
 
   &:active {
-    background: darken(#aaa, 10%);
+    background: darken($sliverChalice, 10%);
   }
 }
