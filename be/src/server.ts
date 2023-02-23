@@ -1,7 +1,7 @@
 import express from "express";
 
 import calculator from "./calculator/controller";
-import { errorHandler } from "./utils/middlewares/errorHandler";
+import { errorHandler } from "./utils/middlewares";
 
 const app = express();
 

@@ -27,7 +27,7 @@ const useRemoteCalculator = (): RemoteCalculator => {
   });
 
   useEffect(() => {
-    fetch("http://localhost:3010/calculator")
+    fetch(`${import.meta.env.VITE_API_URL}/calculator`)
       .then((res) => res.json())
       .then((data) => {
         setState((oldState) => ({
@@ -43,7 +43,7 @@ const useRemoteCalculator = (): RemoteCalculator => {
   }, []);
 
   const handleAction = (action: string) => {
-    fetch("http://localhost:3010/calculator/action", {
+    fetch(`${import.meta.env.VITE_API_URL}/calculator/action`, {
       method: "POST",
       headers: {
         "Content-type": "application/json",

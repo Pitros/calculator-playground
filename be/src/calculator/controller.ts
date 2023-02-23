@@ -1,10 +1,10 @@
 import { Router, json } from "express";
 import cors from "cors";
 
-import { catchAsyncErrors } from "../utils/middlewares";
 import { validateBody } from "../utils/validate";
 import { calculatorAction, CalculatorKeys, initialState } from "./service";
 import { actionPayload } from "./validators";
+import { catchAsyncErrors } from "../utils/middlewares";
 
 const router = Router();
 

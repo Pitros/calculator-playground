@@ -70,7 +70,7 @@ export const calculatorAction = ({
     }
     case "+/-":
       if (state.currentValue !== "0") {
-        state.currentValue =
+        newState.currentValue =
           state.currentValue.at(0) === "-"
             ? state.currentValue.substring(1)
             : `-${state.currentValue}`;
