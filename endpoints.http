@@ -1,0 +1,19 @@
+### Get keys
+GET http://localhost:3010/calculator/keys
+
+### Get initial status and keys
+GET http://localhost:3010/calculator
+
+### Action
+POST http://localhost:3010/calculator/action
+content-type: application/json
+
+{
+    "state": {
+        "currentValue":"2",
+        "previousValue":2,
+        "operation":"+",
+        "lastInput":"2"
+    },
+    "action": "="
+}

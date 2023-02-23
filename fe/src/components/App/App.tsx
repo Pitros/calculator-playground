@@ -1,10 +1,10 @@
 import "./App.css";
-import Calculator from "../Calculator";
+import RemoteCalculator from "../RemoteCalculator";
 
 function App() {
   return (
     <div className="App">
-      <Calculator />
+      <RemoteCalculator />
     </div>
   );
 }
