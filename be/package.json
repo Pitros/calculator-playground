@@ -9,6 +9,9 @@
     "dev": "node --watch dist/server.js",
     "start": "node dist/server.js"
   },
+  "engines": {
+    "node": "^18"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",

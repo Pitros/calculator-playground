@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { api } from "../services/api";
 
 interface CalculatorState {
   status: "LOADING" | "LOADED" | "ERROR";
@@ -27,8 +28,7 @@ const useRemoteCalculator = (): RemoteCalculator => {
   });
 
   useEffect(() => {
-    fetch(`${import.meta.env.VITE_API_URL}/calculator`)
-      .then((res) => res.json())
+    api("/calculator")
       .then((data) => {
         setState((oldState) => ({
           ...oldState,
@@ -37,26 +37,13 @@ const useRemoteCalculator = (): RemoteCalculator => {
           keys: data.keys,
         }));
       })
-      .catch(() => {
+      .catch((err) => {
         setState((oldState) => ({ ...oldState, status: "ERROR" }));
       });
   }, []);
 
   const handleAction = (action: string) => {
-    fetch(`${import.meta.env.VITE_API_URL}/calculator/action`, {
-      method: "POST",
-      headers: {
-        "Content-type": "application/json",
-      },
-      body: JSON.stringify({ state, action }),
-    })
-      .then((res) => {
-        if (!res.ok) {
-          throw new Error();
-        }
-
-        return res.json();
-      })
+    api("/calculator/action", { method: "POST", json: { state, action } })
       .then((data) => {
         setState((oldState) => ({
           ...oldState,
