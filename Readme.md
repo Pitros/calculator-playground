@@ -7,10 +7,11 @@ Simple calculator with basic operations, in both FE only and FE & BE app.
 Everything is configured for quick dev run/preview
 
 ```
-    docker-compose up
+docker-compose up
 ```
 
 FE will be available at: http://localhost:3040
+
 BE will ba available at: http://localhost:3050
 
 ## BE
