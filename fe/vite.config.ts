@@ -8,6 +8,10 @@ import path from "path";
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
+  server: {
+    port: Number(process.env.PORT || 3010),
+    host: true,
+  },
   test: {
     globals: true,
     environment: "jsdom",

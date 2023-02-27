@@ -12,7 +12,7 @@ export const api: ApiRequest<any> = async (
   { method, json } = { method: "GET" }
 ) => {
   const res = await fetch(`${import.meta.env.VITE_API_URL}${url}`, {
-    method: "POST",
+    method,
     headers: {
       ...(method === "POST" && {
         "Content-type": "application/json",

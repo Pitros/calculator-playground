@@ -2,6 +2,17 @@
 
 Simple calculator with basic operations, in both FE only and FE & BE app.
 
+## Running development preview via Docker
+
+Everything is configured for quick dev run/preview
+
+```
+    docker-compose up
+```
+
+FE will be available at: http://localhost:3040
+BE will ba available at: http://localhost:3050
+
 ## BE
 
 Requirements: Node ^18
@@ -33,3 +44,4 @@ Remote one communicates with BE to get all data, basically overkill, communicati
 1. Clone repo and open be dir
 2. If needed adjust config by copying `.env` file and tweak API host
 3. Start backend `npm run dev`
+
