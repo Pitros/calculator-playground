@@ -4,7 +4,7 @@ Simple calculator with basic operations with use of BE & FE communication.
 
 ## Running development preview via Docker
 
-Everything is configured for quick dev run/preview
+Everything is configured for quick dev run/preview, each directory (be/fe) contains own dockerfile. 
 
 ```
 docker-compose build
