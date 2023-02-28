@@ -18,3 +18,7 @@ const PORT = process.env.PORT || 3010;
 app.listen(PORT, () => {
   console.log("Server listening on port", PORT);
 });
+
+process.on("SIGINT", function () {
+  process.exit();
+});

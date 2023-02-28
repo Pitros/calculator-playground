@@ -1,0 +1,9 @@
+version: "3.9"
+name: mccalc_be
+services:
+  be:
+    build: .
+    ports:
+      - "3010:3000"
+    environment:
+      - PORT=3000

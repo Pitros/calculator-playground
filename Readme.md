@@ -1,12 +1,13 @@
 # Calculator app
 
-Simple calculator with basic operations, in both FE only and FE & BE app.
+Simple calculator with basic operations with use of BE & FE communication.
 
 ## Running development preview via Docker
 
 Everything is configured for quick dev run/preview
 
 ```
+docker-compose build
 docker-compose up
 ```
 
@@ -37,12 +38,12 @@ Run with `npm run test`
 
 ## FE
 
-Requirements: Node ^18
+Setup is done with Vite, which gives almost zero config option to build React app.
+App uses RemoteCalculator component which uses custom calculator hook which communicates with BE for all logic.
+It fetches list of available calculator actions (buttons) and initial state, then chosen action with current state is sent to get results.
 
-No config setup with Vite, includes `Calculator` and `RemoteCalculator` components.
-Remote one communicates with BE to get all data, basically overkill, communication is simplified.
+Requirements: Node ^18
 
 1. Clone repo and open be dir
 2. If needed adjust config by copying `.env` file and tweak API host
 3. Start backend `npm run dev`
-
